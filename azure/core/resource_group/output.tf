@@ -1,14 +1,9 @@
-output "name" {
-  description = "Resource Group Name"
-  value       = azurerm_resource_group.resource_group.name
+output "resource_group_ids" {
+  description = "Resource Group details"
+  value = {
+    name     = azurerm_resource_group.resource_group.name
+    location = azurerm_resource_group.resource_group.location
+    id       = azurerm_resource_group.resource_group.id
+  }
 }
 
-output "location" {
-  description = "Resource Group Location"
-  value = azurerm_resource_group.resource_group.location
-}
-
-output "id" {
-  description = "Resource Group Id"
-  value       = azurerm_resource_group.resource_group.id
-}
