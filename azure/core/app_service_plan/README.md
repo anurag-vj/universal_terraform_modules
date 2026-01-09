@@ -7,7 +7,7 @@ Usage
 ```hcl
 module "app_service_plan" {
   source               = "../../core/app_service_plan"
-  app_service_plan_name = "example-asp"
+  name = "example-asp"
   location             = "eastus"
   resource_group_name  = "rg-my-apps"
   os_type              = "Linux"   # or "Windows"
@@ -22,7 +22,7 @@ resource_id = module.app_service_plan.id
 ```
 
 Inputs
-- `app_service_plan_name` (string) : Name of the App Service Plan.
+- `name` (string) : Name of the App Service Plan.
 - `location` (string) : Azure location for the plan.
 - `resource_group_name` (string) : Resource group name.
 - `os_type` (string) : OS for the plan. Allowed values: `Linux` or `Windows`. Default: `Linux`.

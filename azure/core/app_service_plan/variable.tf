@@ -1,4 +1,4 @@
-variable "app_service_plan_name" {
+variable "name" {
   description = "Name of the app service plan"
   type        = string
 }

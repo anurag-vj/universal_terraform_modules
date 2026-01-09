@@ -8,7 +8,7 @@ Usage
 ```hcl
 module "web_app" {
 	source              = "../../compute/web-app"
-	web_app_name        = "example-webapp"
+	name        = "example-webapp"
 	location            = "eastus"
 	resource_group_name = "rg-my-apps"
 	service_plan_id     = "<app_service_plan_resource_id>" # usually module.app_service_plan.id
@@ -23,7 +23,7 @@ module "web_app" {
 ```
 
 Inputs
-- `web_app_name` (string) : Name for the Web App (must be unique within the App Service namespace).
+- `name` (string) : Name for the Web App (must be unique within the App Service namespace).
 - `location` (string) : Azure location to create the Web App in.
 - `resource_group_name` (string) : Resource group name for the Web App.
 - `service_plan_id` (string) : ID of an existing App Service Plan to host the Web App.
