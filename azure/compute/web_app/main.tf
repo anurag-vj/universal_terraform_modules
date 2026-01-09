@@ -7,7 +7,9 @@ resource "azurerm_linux_web_app" "linux_web_app" {
 
   https_only = true
 
-  site_config {}
+  site_config {
+    always_on = local.enable_always_on
+  }
 
   app_settings = var.app_settings
 
@@ -23,7 +25,9 @@ resource "azurerm_windows_web_app" "windows_web_app" {
 
   https_only = true
 
-  site_config {}
+  site_config {
+    always_on = local.enable_always_on
+  }
 
   app_settings = var.app_settings
 
