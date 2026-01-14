@@ -15,7 +15,8 @@ variable "address_space" {
 }
 
 variable "dns_servers" {
-  type = optional(type(string))
+  type    = type(string)
+  default = {}
 }
 
 variable "tags" {
