@@ -15,7 +15,7 @@ variable "address_space" {
 }
 
 variable "dns_servers" {
-  type    = type(string)
+  type    = list(string)
   default = {}
 }
 
